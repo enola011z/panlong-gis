@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图服务 - 盘龙区便民服务GIS平台</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 高德地图API -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=6e0ec5d0d6c27506f14bafd70b1b952c"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <nav class="container">
+            <div class="logo">盘龙区便民服务GIS平台</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="map.html">地图服务</a></li>
+                <li><a href="emergency.html">应急求助</a></li>
+                <li><a href="report.html">设施上报</a></li>
+                <li><a href="#">关于平台</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 地图容器 -->
+    <div class="map-container">
+        <!-- 左侧功能面板 -->
+        <div class="left-panel">
+            <h3>功能面板</h3>
+            
+            <!-- 搜索框 -->
+            <div class="search-box">
+                <input type="text" placeholder="搜索设施...">
+            </div>
+            
+            <!-- 图层控制 -->
+            <div class="layer-control">
+                <h3>图层控制</h3>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-1" value="手机充电点" checked>
+                    <label for="layer-1">手机充电点</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-2" value="公厕" checked>
+                    <label for="layer-2">公厕</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-3" value="医疗点" checked>
+                    <label for="layer-3">医疗点</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-4" value="休息点" checked>
+                    <label for="layer-4">休息点</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-5" value="打卡点">
+                    <label for="layer-5">打卡点</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-6" value="停车点">
+                    <label for="layer-6">停车点</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-7" value="母婴室">
+                    <label for="layer-7">母婴室</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-8" value="养老设施">
+                    <label for="layer-8">养老设施</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-9" value="汽车/电瓶车充电桩">
+                    <label for="layer-9">充电桩</label>
+                </div>
+                <div class="layer-item">
+                    <input type="checkbox" id="layer-10" value="救助站">
+                    <label for="layer-10">救助站</label>
+                </div>
+            </div>
+            
+            <!-- 推荐清单 -->
+            <div class="recommend-list">
+                <h3>推荐设施</h3>
+                <ul>
+                    <li>盘龙区图书馆</li>
+                    <li>盘龙区人民医院</li>
+                    <li>盘龙区中心广场</li>
+                    <li>盘龙区停车场</li>
+                </ul>
+            </div>
+            
+            <!-- 上报入口 -->
+            <div class="report-entry">
+                <a href="report.html" class="map-btn" style="display: block; text-align: center; text-decoration: none; margin-top: 20px;">设施上报</a>
+            </div>
+        </div>
+        
+        <!-- 中间地图展示区 -->
+        <div class="map-area">
+            <div id="map"></div>
+        </div>
+        
+        <!-- 右侧信息区 -->
+        <div class="right-panel">
+            <h3>点位详情</h3>
+            <div class="point-details">
+                <p>点击地图上的点位查看详情</p>
+            </div>
+            
+            <h3>拍照引导</h3>
+            <div class="photo-guide">
+                <p>最佳拍摄时间：上午9:00-11:00</p>
+                <p>推荐拍摄角度：正面</p>
+            </div>
+            
+            <h3>应急卡片</h3>
+            <div class="emergency-card">
+                <p><strong>急救电话：</strong>120</p>
+                <p><strong>报警电话：</strong>110</p>
+                <p><strong>消防电话：</strong>119</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

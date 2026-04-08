@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设施上报 - 盘龙区便民服务GIS平台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <nav class="container">
+            <div class="logo">盘龙区便民服务GIS平台</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="map.html">地图服务</a></li>
+                <li><a href="emergency.html">应急求助</a></li>
+                <li><a href="report.html">设施上报</a></li>
+                <li><a href="#">关于平台</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 上报页面 -->
+    <section class="report-container">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #0066cc;">设施状态上报</h2>
+            <form class="report-form">
+                <div class="form-group">
+                    <label for="facility-type">设施类型</label>
+                    <select id="facility-type" required>
+                        <option value="">请选择设施类型</option>
+                        <option value="手机充电点">手机充电点</option>
+                        <option value="公厕">公厕</option>
+                        <option value="医疗点">医疗点</option>
+                        <option value="休息点">休息点</option>
+                        <option value="打卡点">打卡点</option>
+                        <option value="停车点">停车点</option>
+                        <option value="母婴室">母婴室</option>
+                        <option value="养老设施">养老设施</option>
+                        <option value="汽车/电瓶车充电桩">充电桩</option>
+                        <option value="救助站">救助站</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="issue-type">问题类型</label>
+                    <select id="issue-type" required>
+                        <option value="">请选择问题类型</option>
+                        <option value="损坏">设施损坏</option>
+                        <option value="关闭">设施关闭</option>
+                        <option value="位置错误">位置错误</option>
+                        <option value="其他">其他问题</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">设施位置</label>
+                    <input type="text" id="location" placeholder="请输入设施位置" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">问题描述</label>
+                    <textarea id="description" placeholder="请详细描述问题情况" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">联系方式（选填）</label>
+                    <input type="tel" id="contact" placeholder="请输入您的联系电话">
+                </div>
+                
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-btn">提交上报</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 盘龙区全场景便民服务GIS集成平台 版权所有</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
